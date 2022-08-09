@@ -1,0 +1,156 @@
+@font-face {
+    font-family: FuturaPT;
+    src: url("/midia/fontes/FuturaPT.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: FuturaPT;
+}
+
+body {
+    background: #E7EEF8;
+    overflow-x: hidden;
+}
+
+.cabecalho {
+    height: 80px;
+    display: flex;
+    margin-left: 70px;
+    margin-bottom: -40px;
+    align-items: center;
+    justify-content: left;
+}
+
+.container-top {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.container-bot {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.videos{
+    margin-right: 130px;
+    margin-top: 40px;
+}
+
+.videos video{
+    width: calc(100% - 20px);
+    max-width: 500px;
+}
+
+.videos h2{
+    margin-bottom: 10px;
+}
+
+.box{
+    width: 100%;
+    margin-left: 70px;
+}
+
+nav {
+    display: flex;
+    height: 120px;
+    width: 100%;
+    background-color: #04134B;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+
+nav .logo {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: #f88f06;
+}
+
+nav .menu-btn i {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+nav input{
+    background: white;
+    border-radius: 6px;
+    width: 50px;
+    height: 35px;
+    border: 1px;
+}
+
+
+
+@media (max-width: 920px) {
+    nav .menu-btn i {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 120px;
+        right: -240px;
+        background-color: #04134B;
+        height: 100vh;
+        width: 240px;
+        text-align: center;
+        display: block;
+        transition: all 0.6s ease;
+    }
+
+    nav ul.open {
+        right: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    nav ul li a {
+        font-size: 23px;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        color: #f88f06;
+    }
+}
